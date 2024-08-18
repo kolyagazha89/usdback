@@ -15,6 +15,7 @@ from src.stage.router import router as router_stage
 from src.users.router import router as router_user
 from src.party.router import router as router_party
 from rtc.router import router as router_rtc
+from src.news.router import router as router_news
 
 app=FastAPI()
 
@@ -37,6 +38,7 @@ app.include_router(router_stage)
 app.include_router(router_user)
 app.include_router(router_party)
 app.include_router(router_rtc)
+app.include_router(router_news)
 
 
 fastapi_users = FastAPIUsers[User, int](

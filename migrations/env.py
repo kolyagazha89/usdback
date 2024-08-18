@@ -16,6 +16,7 @@ from src.stage import stage, stagePartner, stageTags
 from src.photoAndVideoStage import photo, video
 from src.users import user, front, sub, back, battery
 from src.party import partcipant,ParticipantClass,result
+from src.news import news
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
@@ -47,7 +48,8 @@ target_metadata = [
     battery.metadata,
     partcipant.metadata,
     ParticipantClass.metadata,
-    result.metadata
+    result.metadata,
+    news.metadata
 
 ]
 

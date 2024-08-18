@@ -20,7 +20,7 @@ router = APIRouter(
     prefix="/rtc",
     tags=["Rtc"]
 )
-model = YOLO("C:\\Users\Шнырь\Desktop\диплом\yolo8\\runs\detect\\train\weights\\best.pt")
+model = YOLO("C:\\Users\Шнырь\Desktop\\usd\yolo8\\runs\detect\\train\weights\\best.pt")
 pcs = set()
 pc = RTCPeerConnection()
 pcs.add(pc)
@@ -44,7 +44,7 @@ class VideoTransformTrack(MediaStreamTrack):
                 new_frame = VideoFrame.from_ndarray(img, format="bgr24")
                 new_frame.pts = frame.pts
                 new_frame.time_base = frame.time_base
-                dc.send(ntt.text_rec(r"C:/Users/Шнырь/Desktop/диплом/backend/runs/detect/predict/crops/num/image0.jpg"))
+                dc.send(ntt.text_rec(r"C:/Users/Шнырь/Desktop/usd/backend/runs/detect/predict/crops/num/image0.jpg"))
                 await pc.close()
                 pcs.discard(pc)
                 return new_frame
